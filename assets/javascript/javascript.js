@@ -1,9 +1,4 @@
-/*
-1) User inputs request
-2) Request is placed into table and database
-3)  
 
-*/
 var config = {
     apiKey: "AIzaSyBstSaz1eUJ3OztFV7dx62TzLGIOuqnOOs",
     authDomain: "quantum-boulder-196206.firebaseapp.com",
