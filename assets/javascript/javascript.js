@@ -25,9 +25,11 @@ $(document).ready(function() {
         var requestedServices = $('#service-input').val().trim();
         var requestedDate = $('#date-input').val().trim();
         var userComment = $('#comment-input').val().trim();
+        var assignTo = $('#assign-to').val().trim();
         console.log(projectNumber, requestedServices, requestedDate, userComment);
 
             keyHolder = dataRef.push({
+                assignTo : assignTo,
                 projectNumber: projectNumber,
                 requestedServices: requestedServices,
                 requestedDate: requestedDate, 
@@ -39,6 +41,8 @@ $(document).ready(function() {
 
 
             $('.emgSchedule').append("<tr class='table-row' id=" + "'" + childSnapshot.key() + "'" + ">" +
+                "<td class='col-xs-2'>" + childSnapshot.val().assignTo +
+                "</td>" +
                 "<td class='col-xs-3 text-center'>" + childSnapshot.val().projectNumber +
                 "</td>" +
                 "<td class='col-xs-2'>" + childSnapshot.val().requestedServices +
