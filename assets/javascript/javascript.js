@@ -55,4 +55,5 @@ $(document).ready(function() {
         $(this).closest('tr').remove();
         getKey = $(this).parent().parent().attr('id');
         dataRef.child(getKey).remove();
+        console.log(this);
     });
